@@ -1,0 +1,13 @@
+// Loaded BEFORE theme defaults — override SCSS variables here.
+
+$body-font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  "Helvetica Neue", Arial, sans-serif;
+
+$mono-font-family: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Monaco,
+  Consolas, monospace;
+
+$body-heading-font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+
+// Slightly tighter heading line-height for the hero
+$body-line-height: 1.65;
+$content-line-height: 1.65;

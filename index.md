@@ -1,15 +1,17 @@
 ---
 title: Home
 layout: default
-permalink: /
 nav_order: 1
 ---
 
-# Local LLM + Claude Code — Complete Setup Guide
-{: .no_toc }
-
-**A step-by-step guide to running Qwen 3.6 + Gemma 4 locally, with Claude Code talking to them over SSH.**
-{: .no_toc }
+<section class="hero">
+  <h1>Local LLM + Claude Code</h1>
+  <p class="hero-subtitle">Run Qwen 3.6 and Gemma 4 locally on a 24&nbsp;GB GPU. Talk to them from Claude Code over SSH. Full privacy, zero marginal cost.</p>
+  <div class="hero-buttons">
+    <a href="#1-hardware-prerequisites" class="btn btn-purple fs-5">Get started →</a>
+    <a href="https://github.com/jaloliddin-rus/local-llm-claude-code-guide" class="btn fs-5" target="_blank" rel="noopener">View on GitHub</a>
+  </div>
+</section>
 
 Every number and config in this guide is measured on real hardware, not estimated. Confirmed on RTX A5000 24 GB + Linux Mint 22.3. Should transfer identically to RTX A5500 or any other 24 GB Ampere card.
 

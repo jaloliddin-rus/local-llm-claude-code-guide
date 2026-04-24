@@ -1,0 +1,176 @@
+// Polish — loaded AFTER theme styles.
+
+body {
+  font-feature-settings: "ss01", "cv11", "cv02";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.003em;
+}
+
+// Headings: tighter, larger, more confident
+h1, .text-alpha {
+  letter-spacing: -0.025em;
+  font-weight: 700;
+}
+h2 {
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  margin-top: 2.5rem;
+}
+h3 {
+  letter-spacing: -0.015em;
+  font-weight: 600;
+}
+
+// Rounded code blocks
+.highlight,
+pre.highlight,
+figure.highlight {
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  padding: 1rem 1.1rem;
+  overflow-x: auto;
+}
+
+// Inline code gets a subtle bg
+code.language-plaintext,
+p code,
+li code,
+td code {
+  background: rgba(167, 139, 250, 0.1);
+  color: #c4b5fd;
+  padding: 0.1em 0.4em;
+  border-radius: 5px;
+  font-size: 0.88em;
+  border: 1px solid rgba(167, 139, 250, 0.15);
+}
+
+// Tables: softer borders, rounded, hoverable rows
+.main-content table {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.main-content table th {
+  background: #151c2c;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  color: #cbd5e1;
+}
+.main-content table tbody tr:hover {
+  background: rgba(167, 139, 250, 0.04);
+}
+
+// Better reading line-length
+.main-content {
+  max-width: 920px;
+}
+
+// Sidebar polish
+.side-bar {
+  border-right: 1px solid rgba(148, 163, 184, 0.08);
+}
+.nav-list .nav-list-link:hover {
+  background-image: linear-gradient(
+    -90deg,
+    rgba(167, 139, 250, 0.08) 0%,
+    rgba(167, 139, 250, 0) 80%
+  );
+}
+
+// Search box polish
+.search-input {
+  border-radius: 8px;
+}
+
+// Callout polish (used by `{: .warning }` etc.)
+.warning, .note, .important, .tip, .highlight-block {
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border-left-width: 4px;
+}
+
+// Hero styling on home
+.hero {
+  padding: 2.5rem 0 2rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+}
+.hero h1 {
+  font-size: 3.25rem !important;
+  line-height: 1.05 !important;
+  background: linear-gradient(135deg, #f8fafc 0%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem !important;
+}
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #94a3b8;
+  font-weight: 400;
+  line-height: 1.55;
+  max-width: 640px;
+  margin-bottom: 1.75rem;
+}
+.hero-buttons .btn {
+  border-radius: 8px;
+  padding: 0.65rem 1.25rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin-right: 0.5rem;
+}
+.hero-buttons .btn-purple {
+  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+  border: none;
+  color: white;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+}
+.hero-buttons .btn-purple:hover {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  box-shadow: 0 6px 16px rgba(124, 58, 237, 0.45);
+  transform: translateY(-1px);
+}
+
+// Blockquote as soft callout
+.main-content blockquote {
+  border-left: 3px solid #a78bfa;
+  background: rgba(167, 139, 250, 0.05);
+  padding: 1rem 1.25rem;
+  border-radius: 0 8px 8px 0;
+  color: #cbd5e1;
+}
+
+// Prettier horizontal rules
+.main-content hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(148, 163, 184, 0.25),
+    transparent
+  );
+  margin: 2.5rem 0;
+}
+
+// Aux links (GitHub link top-right) polish
+.site-header .aux-nav-list-item a {
+  border-radius: 6px;
+  transition: background 0.15s ease;
+}
+
+// Smoother scroll for anchor links
+html {
+  scroll-behavior: smooth;
+}
+
+// Selection color
+::selection {
+  background: rgba(167, 139, 250, 0.35);
+  color: #fff;
+}
