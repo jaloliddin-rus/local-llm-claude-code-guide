@@ -67,3 +67,4 @@ exclude:
   - vendor
   - .sass-cache
   - .jekyll-cache
+  - README.md
