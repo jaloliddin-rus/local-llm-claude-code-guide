@@ -1,0 +1,52 @@
+<button
+  id="theme-toggle"
+  class="theme-toggle-btn"
+  type="button"
+  aria-label="Toggle color theme"
+  title="Toggle light/dark theme">
+  <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+</button>
+
+<script>
+(function () {
+  var KEY = 'jtd-theme-preference';
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var icon = btn.querySelector('.theme-toggle-icon');
+
+  function setAttr(theme) {
+    document.documentElement.setAttribute(
+      'data-theme',
+      theme === 'custom_light' ? 'light' : 'dark'
+    );
+  }
+
+  function apply(theme) {
+    if (typeof jtd !== 'undefined' && jtd.setTheme) {
+      jtd.setTheme(theme);
+    }
+    setAttr(theme);
+    icon.textContent = theme === 'custom_light' ? '☀' : '☾';
+    try { localStorage.setItem(KEY, theme); } catch (e) {}
+  }
+
+  // Initial state: use saved preference or fall back to the default (dark).
+  var saved;
+  try { saved = localStorage.getItem(KEY); } catch (e) {}
+  if (saved === 'custom_light') {
+    apply('custom_light');
+  } else {
+    setAttr('custom_dark');
+    icon.textContent = '☾';
+  }
+
+  btn.addEventListener('click', function () {
+    var current = (typeof jtd !== 'undefined' && jtd.getTheme)
+      ? jtd.getTheme()
+      : (document.documentElement.getAttribute('data-theme') === 'light'
+          ? 'custom_light'
+          : 'custom_dark');
+    apply(current === 'custom_light' ? 'custom_dark' : 'custom_light');
+  });
+})();
+</script>

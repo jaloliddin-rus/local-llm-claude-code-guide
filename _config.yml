@@ -1,4 +1,4 @@
-title: Local LLM + Claude Code Guide
+title: Local LLM Guide
 description: Step-by-step guide to running Qwen 3.6 + Gemma 4 locally, with Claude Code talking to them over SSH.
 
 remote_theme: just-the-docs/just-the-docs
